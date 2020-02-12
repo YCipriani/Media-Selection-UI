@@ -22,15 +22,30 @@ export class MediaFormComponent implements OnInit {
     this.http.listImages().subscribe(data => {
       this.photos = data;
       console.log(this.photos);
-      for(var pic of this.photos['results']) {
+      for(var pic of this.photos as Object[]) {
         console.log("OK");
         console.log(pic);
         console.log(pic['urls']['raw']);
-        imgArray[i] = new Image(150,150);
+        imgArray[i] = new Image(150,200);
         imgArray[i].src = pic['urls']['raw'];
         modal.appendChild(imgArray[i]);
+        imgArray[i].onclick = function(){
+          // var selected = new Image(300,350);
+          // selected.src = pic['urls']['raw'];
+          // var placement = document.getElementById("image_place");
+          // placement.appendChild(selected);
+
+          var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+          photo_selected.src = pic['urls']['raw'];
+          var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+          name_of_photo.value = pic['description'];
+          var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+          desc_of_photo.value = pic['alt_description'];
+          //alert( 'You clicked me' );
+        };
         i++;
       }
+
     });
   }
 }
