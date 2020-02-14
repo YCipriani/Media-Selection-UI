@@ -10,6 +10,28 @@
     overflow-y: auto;
 }
 
+h4 {
+    font-weight: bold;
+}
+
 img[src=""] {
     display: none;
+}
+
+img {
+    border-width: 1px;
+    border-color: Black;
+}
+
+button {
+    margin-right: 5px;
+}
+
+label {
+    font-weight: bold; 
+}
+
+form {
+    margin-left: 5px;
+    margin-top: 2px;
 }

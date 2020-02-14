@@ -30,7 +30,7 @@ export class MediaFormComponent implements OnInit {
     var a,b,c,d,e,f,g,h,j,k;
     var modal = document.getElementById("list");
     for(var pic of this.photos as Object[]) {
-      console.log(pic);
+      //console.log(pic);
       if (i==0) {a=pic;}
       else if (i==1) {b=pic;}
       else if (i==2) {c=pic;}
@@ -53,7 +53,9 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = a['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = a['alt_description'];
-    };
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+      };
 
     imgArray[1].onclick = function(){
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
@@ -62,6 +64,8 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = b['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = b['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[2].onclick = function(){
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
@@ -70,6 +74,8 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = c['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = c['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[3].onclick = function(){
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
@@ -78,6 +84,8 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = d['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = d['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[4].onclick = function(){
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
@@ -86,6 +94,8 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = e['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = e['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[5].onclick = function(){
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
@@ -94,6 +104,8 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = f['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = f['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[6].onclick = function(){
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
@@ -102,6 +114,8 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = g['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = g['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[7].onclick = function(){
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
@@ -110,6 +124,8 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = h['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = h['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[8].onclick = function(){
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
@@ -118,14 +134,19 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = j['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = j['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[9].onclick = function(){
+      this.showModal =false;
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
       photo_selected.src = k['urls']['raw'];
       var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
       name_of_photo.value = k['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = k['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
     };
     //console.log(imgArray);
   }
@@ -136,5 +157,13 @@ export class MediaFormComponent implements OnInit {
     name_of_photo.value = "";
     var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
     desc_of_photo.value = "";
+    document.getElementById("clear_image").style.visibility = "hidden";
   }
+
+  openModal() {
+    this.showModal =true;
+    document.getElementById("myModal").style.visibility = "visible";
+    console.log("here");
+  }
+
 }

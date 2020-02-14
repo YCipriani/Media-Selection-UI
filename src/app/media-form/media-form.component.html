@@ -9,7 +9,7 @@
           <h4 class="modal-title">Unsplash API Photos</h4>
         </div>
         <div class="modal-body" id="list">
-          <p>Some text in the modal.</p>
+          <p>Please select an image to display</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" (click)="showModal=false" data-dismiss="modal">Close</button>
@@ -32,7 +32,7 @@
         <label for="description">Description</label>
         <textarea id="description" cols="20" rows="5" class="form-control"></textarea>
     </div>
-    <button type="button" class="btn btn-info btn-lg" (click)="showModal=true" data-toggle="modal" data-target="#myModal">Select Image</button>
-    <button type="button" class="btn btn-info btn-lg" (click)="clear()">Clear Image</button>
+    <button type="button" class="btn btn-info btn-lg" (click)="openModal()" data-toggle="modal" data-target="#myModal">Select Image</button>
+    <button type="button" id="clear_image" class="btn btn-info btn-lg" (click)="clear()" style="visibility: hidden;">Clear Image</button>
 </form>
 
