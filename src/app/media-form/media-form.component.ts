@@ -27,7 +27,7 @@ export class MediaFormComponent implements OnInit {
   fillModal(photos) {
     var imgArray = new Array();
     var i = 0;
-    var a,b,c,d,e,f,g,h,j,k;
+    var a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u;
     var modal = document.getElementById("list");
     for(var pic of this.photos as Object[]) {
       //console.log(pic);
@@ -40,7 +40,17 @@ export class MediaFormComponent implements OnInit {
       else if (i==6) {g=pic}
       else if (i==7) {h=pic;}
       else if (i==8) {j=pic;}
-      else {k=pic;}
+      else if (i==9) {k=pic;}
+      else if (i==10) {l=pic;}
+      else if (i==11) {m=pic;}
+      else if (i==12) {n=pic;}
+      else if (i==13) {o=pic}
+      else if (i==14) {p=pic}
+      else if (i==15) {q=pic;}
+      else if (i==16) {r=pic;}
+      else if (i==17) {s=pic;}
+      else if (i==18) {t=pic;}
+      else {u=pic;}
       imgArray[i] = new Image(150,200);
       imgArray[i].src = pic['urls']['raw'];
       modal.appendChild(imgArray[i]);
@@ -145,6 +155,107 @@ export class MediaFormComponent implements OnInit {
       name_of_photo.value = k['description'];
       var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
       desc_of_photo.value = k['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[10].onclick = function(){
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = l['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = l['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = l['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[11].onclick = function(){
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = m['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = m['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = m['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[12].onclick = function(){
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = n['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = n['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = n['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[13].onclick = function(){
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = o['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = o['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = o['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[14].onclick = function(){
+      this.showModal =false;
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = p['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = p['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = p['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[15].onclick = function(){
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = q['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = q['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = q['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[16].onclick = function(){
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = r['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = r['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = r['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[17].onclick = function(){
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = s['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = s['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = s['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[18].onclick = function(){
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = t['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = t['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = t['alt_description'];
+      document.getElementById("clear_image").style.visibility = "visible";
+      document.getElementById("myModal").style.visibility = "hidden";
+    };
+    imgArray[19].onclick = function(){
+      var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
+      photo_selected.src = u['urls']['raw'];
+      var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
+      name_of_photo.value = u['description'];
+      var desc_of_photo = document.getElementById('description') as HTMLTextAreaElement;
+      desc_of_photo.value = u['alt_description'];
       document.getElementById("clear_image").style.visibility = "visible";
       document.getElementById("myModal").style.visibility = "hidden";
     };
