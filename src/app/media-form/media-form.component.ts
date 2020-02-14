@@ -31,6 +31,7 @@ export class MediaFormComponent implements OnInit {
     var modal = document.getElementById("list");
     for(var pic of this.photos as Object[]) {
       //console.log(pic);
+      //sets the list of 20 images with their appropriate variable
       if (i==0) {a=pic;}
       else if (i==1) {b=pic;}
       else if (i==2) {c=pic;}
@@ -148,7 +149,6 @@ export class MediaFormComponent implements OnInit {
       document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[9].onclick = function(){
-      this.showModal =false;
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
       photo_selected.src = k['urls']['raw'];
       var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
@@ -199,7 +199,6 @@ export class MediaFormComponent implements OnInit {
       document.getElementById("myModal").style.visibility = "hidden";
     };
     imgArray[14].onclick = function(){
-      this.showModal =false;
       var photo_selected = document.getElementById('selected_image') as HTMLImageElement;
       photo_selected.src = p['urls']['raw'];
       var name_of_photo = document.getElementById('name') as HTMLTextAreaElement;
